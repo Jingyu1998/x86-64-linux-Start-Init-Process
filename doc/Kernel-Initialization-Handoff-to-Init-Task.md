@@ -10,11 +10,11 @@ tags: init process
 %%{init: {
   'flowchart': { 
     'nodeSpacing': 40, 
-    'rankSpacing': 50,
+    'rankSpacing': 40,
     'curve': 'linear'
   },
   'themeVariables': {
-    'fontSize': '15px',
+    'fontSize': '14px',
     'fontFamily': 'monospace'
   }
 }}%%
