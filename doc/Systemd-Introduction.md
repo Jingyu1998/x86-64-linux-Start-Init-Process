@@ -91,11 +91,11 @@ systemd 在執行 transaction 前會：
 %%{init: {
   'flowchart': { 
     'nodeSpacing': 40, 
-    'rankSpacing': 40,
+    'rankSpacing': 30,
     'curve': 'linear'
   },
   'themeVariables': {
-    'fontSize': '16px',
+    'fontSize': '14px',
     'fontFamily': 'monospace'
   }
 }}%%
