@@ -6,7 +6,7 @@ tags: init process
 
 ## 實作目標
 
-[研究 hedgedoc 可用所需要的最小服務集合-設計原則](http://100.71.125.87:3000/82B5A7p5S9WEQqsPnUq91A?view#%E8%A8%AD%E8%A8%88%E5%8E%9F%E5%89%87)
+[研究 hedgedoc 可用所需要的最小服務集合-設計原則](./Implementing-Minimal-Boot-State-for-HedgeDoc-Availability.md)
 
 上述文件的設計原則是建立一個描述「HedgeDoc 可用」所需最小 dependency graph 的 `hedgedoc.target`。
 

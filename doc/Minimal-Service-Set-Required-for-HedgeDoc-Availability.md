@@ -309,4 +309,4 @@ tailscale service 由 systemd 解析的 dependency
 
 ## 實作
 
-[實作 HedgeDoc 可用的最小 Boot State](http://100.71.125.87:3000/fryK7sW-Ss6zY_jesQj_rw)
+[實作 HedgeDoc 可用的最小 Boot State](./Implementing-Minimal-Boot-State-for-HedgeDoc-Availability.md)

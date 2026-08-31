@@ -10,13 +10,13 @@
 
 研究系統開機時，linux kernel 如何從 kernel initialization 過渡到 userspace 的 init process 的流程。
 
-[Kernel initialization 交接給 Init process](http://100.71.125.87:3000/43KbrfQ7ShyHqjvfa5eZ8Q)
+[Kernel initialization 交接給 Init process](doc/Kernel-Initialization-Handoff-to-Init-Task.md)
 
 ## Init Process- Systemd
 
 許多主流 Linux 發行版使用 systemd 作為 init process。因此本篇文章整理 systemd 的基本觀念，並建立後續研究 systemd bootup 所需的基礎。
 
-[Systemd 簡介](http://100.71.125.87:3000/wQJTGySKSyu8MwvCFVnxMA)
+[Systemd 簡介](doc/Systemd-Introduction.md)
 - description
 - unit
 - unit type
@@ -32,28 +32,28 @@ Service Unit 用於啟動並控制 daemon，以及 daemon 所包含的 processes
 Target Unit 用於將多個 Unit 分組，並作為與其他 Unit file 建立 ordering 和 dependency 時的 synchronization point。
 
 Service Unit
-* [Service Unit- part 1](http://100.71.125.87:3000/w-E4nBPcQ6iVF7JBSKKxfw)
-* [Service Unit- part 2](http://100.71.125.87:3000/cvzyNUqLR46CbKc5-xGBHg)
+* [Service Unit- part 1](doc/Service-Unit-part-1.md)
+* [Service Unit- part 2](doc/Service-Unit-part-2.md)
 
-[Target Unit](http://100.71.125.87:3000/SLVOk7uwTXKlcg0L-KiFdQ)
+[Target Unit](doc/Target-Unit.md)
 
 ## Dependency and Ordering
 
 Dependency 指定在 start 某個 unit 時，需要 start 或 stop 其他哪些單元。
 Ordering 指定必須遵循的 unit 啟動順序
 
-[Unit Dependency and Ordering](http://100.71.125.87:3000/rzuL5xPATjqoVBgcwgpI5Q)
+[Unit Dependency and Ordering](doc/Unit-Dependency-and-Ordering.md)
 
 ## Systemd Bootup
 
 研究 systemd system manager 的 bootup 流程，並研究 bootup 流程的重要的 Target Unit
 
-[Systemd Bootup](http://100.71.125.87:3000/ipqWOTp4SqSU4TnmlJKpvg)
+[Systemd Bootup](doc/Systemd-Bootup.md)
 
 重要的 Target Unit
-- [ Sysinit Target Unit ](http://100.71.125.87:3000/WIIcQutFQMy1U5fgRcIYyA)
-- [ Basic Target Unit ](http://100.71.125.87:3000/yiA53_5xTnioWVEFDoa6Ww)
-- [ Multi-user Target Unit ](http://100.71.125.87:3000/3mVAb06-Qm6biyDjMwrCrw)
+- [ Sysinit Target Unit ](doc/Sysinit-Target-Unit.md)
+- [ Basic Target Unit ](doc/Basic-Target-Unit.md)
+- [ Multi-user Target Unit ](doc/Multi-user-Target-Unit.md)
 
 ## Hedgedoc 可用
 
@@ -66,5 +66,5 @@ Ordering 指定必須遵循的 unit 啟動順序
 最後，將 `hedgedoc.target` 納入正常的 systemd boot flow，並透過 `AllowIsolate=yes` 使其可以成為 `systemctl isolate` 的目標，驗證 systemd 可以在不同 system state 之間切換。
 
 細節參考以下文件:
-* [研究 hedgedoc 可用所需要的最小服務集合](http://100.71.125.87:3000/82B5A7p5S9WEQqsPnUq91A)
-* [實作 HedgeDoc 可用的最小 Boot State](http://100.71.125.87:3000/fryK7sW-Ss6zY_jesQj_rw)
+* [研究 hedgedoc 可用所需要的最小服務集合](doc/Minimal-Service-Set-Required-for-HedgeDoc-Availability.md)
+* [實作 HedgeDoc 可用的最小 Boot State](doc/Implementing-Minimal-Boot-State-for-HedgeDoc-Availability.md)
